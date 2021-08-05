@@ -3,7 +3,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: "try learning about nuxt.js",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'place fo learning something new'
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style>
