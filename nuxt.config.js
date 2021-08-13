@@ -13,10 +13,6 @@ export default {
     ]
   },
 
-  target: 'static',
-
-  mode: 'universal',
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -60,7 +56,13 @@ export default {
     },
   },
 
-env: {
-  baseUrl: process.env.BACKEND_URL || 'http://localhost:3000'
-}
+  env: {
+    baseUrl: process.env.BACKEND_URL || 'http://localhost:3000'
+  },
+
+  server: {
+    port: 3001 // default: 3000
+  },
+
+  ssr: false // default: true
 }
