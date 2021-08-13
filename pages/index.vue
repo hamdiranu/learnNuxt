@@ -5,7 +5,7 @@
       <div>
         <logo />
         <h1 class="title">
-          recipes
+          test {{ message }}
         </h1>
         <h2 class="subtitle">
           My lovely Nuxt.js project
@@ -39,6 +39,11 @@ export default {
   components: {
     Logo,
     Header
+  },
+  computed: {
+    message() {
+      return process.env.baseUrl;
+    },
   }
 }
 </script>

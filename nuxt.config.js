@@ -58,5 +58,9 @@ export default {
     babel: {
       plugins: [['@babel/plugin-proposal-private-property-in-object', { loose: true }]],
     },
-  }
+  },
+
+env: {
+  baseUrl: process.env.BACKEND_URL || 'http://localhost:3000'
+}
 }
