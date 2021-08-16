@@ -40,6 +40,12 @@ export default {
     Logo,
     Header
   },
+  async asyncData (context) {
+    const mountains = await context.$axios.get("/mountains").then((response) => {
+      return response.data
+    })
+    return { mountains }
+  },
   computed: {
     message() {
       return process.env.baseUrl;
